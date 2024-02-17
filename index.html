@@ -4,69 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="mainContainer">
+
+        <div class="app">
+
+            <div class="windowTitle">
+                <h1>Rock Paper Scissors</h1>
+            </div>
+
+            <div class="computerChoice">
+                <h2>Computer Picks:</h2>
+                <div class="computerIcon"></div>
+                <div class="resultMessage"></div>
+            </div>
+
+            <div class="currentScore">
+
+                <div class="scoreText">
+                    <h3>Current Score:</h3>
+                </div>
+
+                <div class="wins">
+                    0
+                </div>
+
+                <div class="ties">
+                    0
+                </div>
+
+                <div class="loses">
+                    0
+                </div>
+
+            </div>
+
+            <div class="yourChoice">
+
+                <button class="rock">
+                    ✊
+                </button>
+
+                <button class="paper">
+                    ✋
+                </button>
+
+                <button class="scissors">
+                    ✂️
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
 
 
-    <script>
-        function getComputerChoice () {
-            let options = ["Rock", "Paper", "Scissors"];
-            let option = Math.floor(Math.random()*3);
-            let choice = options[option];
-            return choice;
-        }
-
-        function playRound (playerSelection, computerSelection) {
-            if (playerSelection === computerSelection) {
-                return `Draw! You both chose ${playerSelection}!`
-            } else if (playerSelection != computerSelection) {
-                if (playerSelection === "Rock") {
-                    if (computerSelection === "Paper") {
-                        return 'You lost! Paper beats Rock!';
-                    } else {
-                        return 'You won! Rock beats Scissors!';
-                    }
-                } else if (playerSelection === "Paper") {
-                    if (computerSelection === "Rock") {
-                        return 'You won! Paper beats Rock!';
-                    } else {
-                        return 'You lost! Scissors beats Paper!';
-                    }
-                } else if (playerSelection === "Scissors") {
-                    if (computerSelection === "Rock") {
-                        return 'You lost! Rock beats Scissors!';
-                    } else {
-                        return 'You won! Scissors beats Paper!';
-                    }
-                }
-            }
-        }
-
-        function playMoreRounds (rounds) {
-            let ties = 0;
-            let wins = 0;
-            let loses = 0;
-
-            for (let i = 0; i < rounds; i++) {
-                const playerSelection = prompt("Enter your choice!");
-                const computerSelection = getComputerChoice();
-                let outcome = playRound(playerSelection, computerSelection);
-                if (outcome.includes("Draw")){
-                    ties++;
-                }
-                else if (outcome.includes("won")){
-                    wins++;
-                }
-                else {
-                    loses++;
-                }
-                console.log(outcome);
-            }
-            console.log(`The final score is: Ties-${ties}, Wins-${wins}, Loses-${loses}`);
-        }
-
-        playMoreRounds(3);
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

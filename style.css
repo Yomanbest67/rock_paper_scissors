@@ -1,0 +1,90 @@
+html, body, .mainContainer {
+    height: 100vh;
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid black;
+    padding: 20px;
+    height: 800px;
+    width: 600px;
+    background-color: rgb(196, 193, 193);
+}
+
+.windowTitle {
+    text-align: center;
+    border-bottom: 5px solid black;
+}
+
+.computerChoice {
+    height: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.computerIcon {
+    font-size: 120px;
+}
+
+.resultMessage {
+    padding: 50px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.currentScore {
+    display: flex;
+    border: 5px solid black;
+    align-items: center;
+}
+
+.currentScore > .scoreText {
+    flex: 5 1 0;
+    padding: 10px;
+}
+
+.wins,
+.ties,
+.loses {
+    font-size: 60px;
+    width: 20%;
+    text-align: center;
+    border-left: 5px solid black;
+}
+
+.wins {
+    background-color: green;
+}
+
+.ties {
+    background-color: grey;
+}
+
+.loses {
+    background-color: red;
+}
+
+.yourChoice {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.yourChoice > button {
+    font-size: 120px;
+    text-align: center;
+    border: 5px solid black;
+}
+
+button:hover {
+    background-color: azure;
+    cursor: pointer;
+}
