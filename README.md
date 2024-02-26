@@ -1,3 +1,4 @@
+# JavaScript Rock Paper Scissors Game.
 Simple Javascript project for Odin Project.
 
 ## Live Page Deployment
